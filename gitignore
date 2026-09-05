@@ -1,0 +1,22 @@
+# === Variables de entorno (nunca subir credenciales reales) ===
+.env
+.env.local
+**/.env
+**/.env.local
+
+# === Simulador (Python) ===
+simulador/venv/
+simulador/__pycache__/
+simulador/*.pyc
+
+# === Web (Node / Vite) ===
+web/node_modules/
+web/dist/
+web/*.tsbuildinfo
+web/.vite/
+
+# === Generales ===
+.DS_Store
+*.log
+.vscode/
+.idea/
