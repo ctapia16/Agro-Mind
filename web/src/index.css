@@ -13,3 +13,14 @@
     @apply bg-hoja/30;
   }
 }
+
+@layer components {
+  /* Vidrio esmerilado: superficie translúcida que deja ver el follaje
+     del fondo, usada por sidebar, tarjetas, alertas y el panel de login. */
+  .glass {
+    @apply rounded-2xl border border-white/10 bg-white/[0.06] shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-xl;
+  }
+  .glass-sunken {
+    @apply rounded-xl border border-white/10 bg-black/10 backdrop-blur-md;
+  }
+}

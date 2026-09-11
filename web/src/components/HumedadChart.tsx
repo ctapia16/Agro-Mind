@@ -46,9 +46,10 @@ export function HumedadChart({ lecturas }: { lecturas: Lectura[] }) {
         />
         <Tooltip
           contentStyle={{
-            background: "#1F2A1C",
-            border: "1px solid #3A4A2C",
-            borderRadius: 8,
+            background: "rgba(22, 31, 20, 0.85)",
+            backdropFilter: "blur(8px)",
+            border: "1px solid rgba(255,255,255,0.12)",
+            borderRadius: 12,
             fontSize: 13,
           }}
           labelStyle={{ color: "#EDEFE3" }}

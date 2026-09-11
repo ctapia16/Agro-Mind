@@ -22,8 +22,8 @@ export function Login() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-campo-950 px-4">
-      <div className="w-full max-w-sm">
+    <div className="flex min-h-screen items-center justify-center px-4">
+      <div className="glass w-full max-w-sm px-8 py-10">
         <h1 className="font-display text-3xl font-medium tracking-tight text-campo-100">
           AgroMind
         </h1>
@@ -42,7 +42,7 @@ export function Login() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-1 w-full rounded-md border border-campo-700 bg-campo-800 px-3 py-2 text-campo-100 outline-none focus:border-hoja"
+              className="mt-1 w-full rounded-lg border border-white/10 bg-black/20 px-3 py-2 text-campo-100 outline-none backdrop-blur-sm focus:border-hoja"
             />
           </div>
           <div>
@@ -55,7 +55,7 @@ export function Login() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="mt-1 w-full rounded-md border border-campo-700 bg-campo-800 px-3 py-2 text-campo-100 outline-none focus:border-hoja"
+              className="mt-1 w-full rounded-lg border border-white/10 bg-black/20 px-3 py-2 text-campo-100 outline-none backdrop-blur-sm focus:border-hoja"
             />
           </div>
 
@@ -64,7 +64,7 @@ export function Login() {
           <button
             type="submit"
             disabled={enviando}
-            className="w-full rounded-md bg-hoja px-4 py-2 font-medium text-campo-950 transition-colors hover:bg-hoja/90 disabled:opacity-60"
+            className="w-full rounded-lg bg-hoja px-4 py-2 font-medium text-campo-950 transition-colors hover:bg-hoja/90 disabled:opacity-60"
           >
             {enviando ? "Entrando…" : "Entrar"}
           </button>

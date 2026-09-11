@@ -38,7 +38,7 @@ export function Dashboard() {
   const parcela = parcelas.find((p) => p.id === seleccionadaId) ?? null;
 
   return (
-    <div className="flex h-screen bg-campo-950">
+    <div className="flex h-screen">
       <Sidebar
         parcelas={parcelas}
         seleccionadaId={seleccionadaId}
@@ -69,7 +69,7 @@ export function Dashboard() {
               </div>
             </header>
 
-            <section>
+            <section className="glass p-5">
               <HumedadChart lecturas={lecturas} />
             </section>
 

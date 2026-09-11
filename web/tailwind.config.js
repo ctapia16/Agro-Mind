@@ -30,6 +30,27 @@ export default {
         sans: ["'IBM Plex Sans'", "system-ui", "sans-serif"],
         data: ["'IBM Plex Mono'", "monospace"],
       },
+      keyframes: {
+        dropFall: {
+          "0%": { transform: "translateY(-12px)", opacity: "0" },
+          "12%": { opacity: "0.9" },
+          "85%": { opacity: "0.7" },
+          "100%": { transform: "translateY(160px)", opacity: "0" },
+        },
+        sprinklerSway: {
+          "0%, 100%": { transform: "rotate(-22deg)" },
+          "50%": { transform: "rotate(22deg)" },
+        },
+        canopyDrift: {
+          "0%, 100%": { transform: "translate3d(0,0,0) scale(1)" },
+          "50%": { transform: "translate3d(-1.5%, 1%, 0) scale(1.03)" },
+        },
+      },
+      animation: {
+        "drop-fall": "dropFall 1.3s linear infinite",
+        "sprinkler-sway": "sprinklerSway 1.4s ease-in-out infinite",
+        "canopy-drift": "canopyDrift 26s ease-in-out infinite",
+      },
     },
   },
   plugins: [],

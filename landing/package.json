@@ -1,0 +1,9 @@
+{
+  "name": "agromind-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page estatica para AgroMind.",
+  "scripts": {
+    "dev": "node server.js"
+  }
+}
