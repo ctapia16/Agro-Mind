@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -15,20 +15,22 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="images/agromind-og-placeholder.svg" />
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+    <!-- NAVBAR -->
     <header class="site-header" id="inicio">
       <nav class="navbar" aria-label="Navegación principal">
         <a class="brand" href="#inicio" aria-label="AgroMind inicio">
-          <span class="brand-mark">A</span>
+          <img class="brand-logo" src="images/logo.png" alt="AgroMind logo" />
           <span>
             <strong>AgroMind</strong>
             <small>Inteligencia que hace crecer el campo.</small>
@@ -54,11 +56,16 @@
     </header>
 
     <main>
-      <section class="hero section-pad" aria-labelledby="hero-title">
-        <div class="container hero-grid">
+
+      <!-- ===================== HERO ===================== -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-bg-photo"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-inner">
           <div class="hero-copy reveal">
             <span class="eyebrow">AgTech + IoT + IA</span>
-            <h1 id="hero-title">La inteligencia también se cultiva.</h1>
+            <h1 id="hero-title">La inteligencia<br>también se cultiva.</h1>
             <p>
               AgroMind integra sensores, IoT e inteligencia artificial para transformar los datos
               del campo en decisiones inteligentes.
@@ -69,82 +76,138 @@
             </div>
           </div>
 
-          <div class="hero-visual reveal" aria-label="Representacion visual de parcela inteligente">
-            <div class="field-scene">
-              <div class="sun"></div>
-              <div class="data-orbit orbit-one"></div>
-              <div class="data-orbit orbit-two"></div>
-              <div class="field-lines">
-                <span></span><span></span><span></span><span></span>
+          <!-- Indicadores flotantes -->
+          <div class="hero-indicators reveal" aria-label="Indicadores de sensores">
+            <div class="hero-field-card">
+              <div class="field-scene" aria-label="Representacion visual de parcela inteligente">
+                <div class="sun"></div>
+                <div class="data-orbit orbit-one"></div>
+                <div class="data-orbit orbit-two"></div>
+                <div class="field-lines">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="sensor sensor-a">
+                  <i></i>
+                  <b>Humedad</b>
+                  <strong>78%</strong>
+                </div>
+                <div class="sensor sensor-b">
+                  <i></i>
+                  <b>Potasio</b>
+                  <strong>Bajo</strong>
+                </div>
+                <div class="ai-card">
+                  <small>AgroMind AI</small>
+                  <strong>Parcela 03</strong>
+                  <p>Recomendación generada</p>
+                </div>
               </div>
-              <div class="sensor sensor-a">
-                <i></i>
-                <b>Humedad</b>
+              <!-- Chips flotantes -->
+              <div class="hero-chip chip-humidity">
+                <span class="chip-dot"></span>
+                <span class="chip-label">Humedad</span>
                 <strong>78%</strong>
               </div>
-              <div class="sensor sensor-b">
-                <i></i>
-                <b>Potasio</b>
-                <strong>Bajo</strong>
+              <div class="hero-chip chip-temp">
+                <span class="chip-dot amber"></span>
+                <span class="chip-label">Temperatura</span>
+                <strong>31 °C</strong>
               </div>
-              <div class="ai-card">
-                <small>AgroMind AI</small>
-                <strong>Parcela 03</strong>
-                <p>Recomendación generada</p>
+              <div class="hero-chip chip-potassium">
+                <span class="chip-dot warning"></span>
+                <span class="chip-label">Potasio</span>
+                <strong>BAJO</strong>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="container hero-stats reveal">
-          <article>
-            <strong>IoT</strong>
-            <span>Sensores conectados</span>
-          </article>
-          <article>
-            <strong>IA</strong>
-            <span>Análisis inteligente</span>
-          </article>
-          <article>
-            <strong>24/7</strong>
-            <span>Monitoreo</span>
-          </article>
+        <div class="hero-stats-bar reveal">
+          <div class="container hero-stats">
+            <article>
+              <strong>IoT</strong>
+              <span>Sensores conectados</span>
+            </article>
+            <article>
+              <strong>IA</strong>
+              <span>Análisis inteligente</span>
+            </article>
+            <article>
+              <strong>24/7</strong>
+              <span>Monitoreo</span>
+            </article>
+          </div>
         </div>
       </section>
 
+      <!-- ===================== PROBLEMA ===================== -->
       <section class="section-pad problem" id="problema">
-        <div class="container">
-          <div class="section-heading reveal">
+        <div class="container problem-layout">
+          <div class="problem-content reveal">
             <span class="eyebrow">Problema</span>
             <h2>El campo genera datos. El reto es convertirlos en decisiones.</h2>
+
+            <div class="problem-list">
+              <div class="problem-item reveal">
+                <span class="problem-icon">H₂O</span>
+                <div>
+                  <h3>Uso ineficiente del agua</h3>
+                  <p>Sin información precisa, el riego puede realizarse sin conocer las condiciones reales del suelo.</p>
+                </div>
+              </div>
+              <div class="problem-item reveal">
+                <span class="problem-icon">K</span>
+                <div>
+                  <h3>Déficit de nutrientes</h3>
+                  <p>Detectar problemas de nutrientes de manera tardía puede afectar el desarrollo del cultivo.</p>
+                </div>
+              </div>
+              <div class="problem-item reveal">
+                <span class="problem-icon">OBS</span>
+                <div>
+                  <h3>Falta de información</h3>
+                  <p>Muchos agricultores dependen de observaciones manuales para conocer el estado de sus parcelas.</p>
+                </div>
+              </div>
+              <div class="problem-item reveal">
+                <span class="problem-icon">T</span>
+                <div>
+                  <h3>Decisiones tardías</h3>
+                  <p>Cuando un problema se detecta demasiado tarde, las opciones de respuesta pueden ser más limitadas.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="card-grid problem-grid">
-            <article class="info-card reveal">
-              <span class="icon">H2O</span>
-              <h3>Uso ineficiente del agua</h3>
-              <p>Sin información precisa, el riego puede realizarse sin conocer las condiciones reales del suelo.</p>
-            </article>
-            <article class="info-card reveal">
-              <span class="icon">K</span>
-              <h3>Déficit de nutrientes</h3>
-              <p>Detectar problemas de nutrientes de manera tardía puede afectar el desarrollo del cultivo.</p>
-            </article>
-            <article class="info-card reveal">
-              <span class="icon">OBS</span>
-              <h3>Falta de información</h3>
-              <p>Muchos agricultores dependen de observaciones manuales para conocer el estado de sus parcelas.</p>
-            </article>
-            <article class="info-card reveal">
-              <span class="icon">T</span>
-              <h3>Decisiones tardías</h3>
-              <p>Cuando un problema se detecta demasiado tarde, las opciones de respuesta pueden ser más limitadas.</p>
-            </article>
+
+          <div class="problem-photo reveal" aria-hidden="true">
+            <div class="problem-photo-inner"></div>
+            <div class="problem-photo-accent"></div>
           </div>
         </div>
       </section>
 
+      <!-- ===================== AGROMIND EN EL SUELO ===================== -->
+      <section class="section-ground">
+        <div class="ground-overlay"></div>
+        <div class="container ground-inner reveal">
+          <span class="eyebrow eyebrow-light">Conectividad</span>
+          <h2 class="ground-title">AgroMind comienza<br>en el suelo.</h2>
+          <p class="ground-text">
+            Antes de llegar a la inteligencia artificial, AgroMind empieza escuchando al suelo.
+            Los sensores recopilan información continua de las condiciones reales de cada parcela.
+          </p>
+          <div class="ground-chips">
+            <span class="ground-chip">Temperatura del suelo</span>
+            <span class="ground-chip">Humedad</span>
+            <span class="ground-chip">Nutrientes</span>
+            <span class="ground-chip">Transmisión LoRa</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SOLUCIÓN ===================== -->
       <section class="section-pad solution" id="solucion">
-        <div class="container split">
+        <div class="container solution-layout">
           <div class="section-heading reveal">
             <span class="eyebrow">Solución</span>
             <h2>Conoce AgroMind</h2>
@@ -154,17 +217,45 @@
             </p>
           </div>
           <div class="flow reveal" aria-label="Flujo de AgroMind">
-            <span>Sensores</span>
-            <span>Datos</span>
-            <span>Plataforma</span>
-            <span>Inteligencia artificial</span>
-            <span>Análisis</span>
-            <span>Recomendación</span>
-            <span>Agricultor</span>
+            <div class="flow-item">
+              <span class="flow-icon">📡</span>
+              <span class="flow-label">Sensor</span>
+            </div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-item">
+              <span class="flow-icon">📶</span>
+              <span class="flow-label">Datos</span>
+            </div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-item flow-item-main">
+              <span class="flow-icon">🌿</span>
+              <span class="flow-label">AgroMind</span>
+            </div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-item">
+              <span class="flow-icon">🤖</span>
+              <span class="flow-label">Inteligencia artificial</span>
+            </div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-item">
+              <span class="flow-icon">📊</span>
+              <span class="flow-label">Análisis</span>
+            </div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-item">
+              <span class="flow-icon">✅</span>
+              <span class="flow-label">Recomendación</span>
+            </div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-item">
+              <span class="flow-icon">👨‍🌾</span>
+              <span class="flow-label">Agricultor</span>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- ===================== CÓMO FUNCIONA ===================== -->
       <section class="section-pad steps-section" id="funciona">
         <div class="container">
           <div class="section-heading reveal">
@@ -206,6 +297,7 @@
         </div>
       </section>
 
+      <!-- ===================== DEMO ===================== -->
       <section class="section-pad demo-section" id="demo">
         <div class="container">
           <div class="section-heading center reveal">
@@ -268,6 +360,7 @@
         </div>
       </section>
 
+      <!-- ===================== VIDEO ===================== -->
       <section class="section-pad video-section" id="video">
         <div class="container">
           <div class="section-heading center reveal">
@@ -333,24 +426,55 @@
         })();
       </script>
 
-
+      <!-- ===================== TECNOLOGÍA ===================== -->
       <section class="section-pad tech-section" id="tecnologia">
         <div class="container">
           <div class="section-heading reveal">
             <span class="eyebrow">Tecnología</span>
             <h2>Tecnología detrás de AgroMind</h2>
           </div>
-          <div class="card-grid tech-grid">
-            <article class="info-card reveal"><span class="icon">IoT</span><h3>IoT</h3><p>Conectividad entre sensores y plataforma.</p></article>
-            <article class="info-card reveal"><span class="icon">SEN</span><h3>Sensores</h3><p>Obtención de variables agrícolas.</p></article>
-            <article class="info-card reveal"><span class="icon">AI</span><h3>Inteligencia Artificial</h3><p>Análisis de información y generación de recomendaciones.</p></article>
-            <article class="info-card reveal"><span class="icon">APP</span><h3>Aplicación</h3><p>Visualización de información desde dispositivos.</p></article>
-            <article class="info-card reveal"><span class="icon">GEO</span><h3>Geolocalización</h3><p>Identificación y organización de parcelas.</p></article>
-            <article class="info-card reveal"><span class="icon">SOL</span><h3>Energía solar</h3><p>Posibilidad de alimentar dispositivos ubicados en zonas rurales mediante energía solar.</p></article>
+          <div class="tech-grid">
+            <article class="tech-item reveal">
+              <span class="tech-icon">📡</span>
+              <div class="tech-number">01</div>
+              <h3>IoT</h3>
+              <p>Conectividad entre sensores y plataforma.</p>
+            </article>
+            <article class="tech-item reveal">
+              <span class="tech-icon">🔬</span>
+              <div class="tech-number">02</div>
+              <h3>Sensores</h3>
+              <p>Obtención de variables agrícolas.</p>
+            </article>
+            <article class="tech-item reveal">
+              <span class="tech-icon">🤖</span>
+              <div class="tech-number">03</div>
+              <h3>Inteligencia Artificial</h3>
+              <p>Análisis de información y generación de recomendaciones.</p>
+            </article>
+            <article class="tech-item reveal">
+              <span class="tech-icon">📱</span>
+              <div class="tech-number">04</div>
+              <h3>Aplicación</h3>
+              <p>Visualización de información desde dispositivos.</p>
+            </article>
+            <article class="tech-item reveal">
+              <span class="tech-icon">📍</span>
+              <div class="tech-number">05</div>
+              <h3>Geolocalización</h3>
+              <p>Identificación y organización de parcelas.</p>
+            </article>
+            <article class="tech-item reveal">
+              <span class="tech-icon">☀️</span>
+              <div class="tech-number">06</div>
+              <h3>Energía solar</h3>
+              <p>Posibilidad de alimentar dispositivos ubicados en zonas rurales mediante energía solar.</p>
+            </article>
           </div>
         </div>
       </section>
 
+      <!-- ===================== CONECTIVIDAD ===================== -->
       <section class="section-pad connectivity">
         <div class="container split reverse">
           <div class="connect-map reveal">
@@ -371,6 +495,7 @@
         </div>
       </section>
 
+      <!-- ===================== DASHBOARD / VISUALIZACIÓN ===================== -->
       <section class="section-pad dashboard-preview">
         <div class="container">
           <div class="section-heading reveal">
@@ -403,6 +528,7 @@
         </div>
       </section>
 
+      <!-- ===================== DIFERENCIADOR ===================== -->
       <section class="section-pad difference">
         <div class="container">
           <div class="section-heading center reveal">
@@ -412,34 +538,55 @@
           <div class="compare-grid">
             <article class="compare-card reveal">
               <h3>Sistema tradicional</h3>
-              <p>Sensor -> Dato -> Agricultor interpreta</p>
+              <p>Sensor → Dato → Agricultor interpreta</p>
             </article>
             <article class="compare-card featured reveal">
               <h3>AgroMind</h3>
-              <p>Sensor -> Dato -> IA -> Análisis -> Recomendación</p>
+              <p>Sensor → Dato → IA → Análisis → Recomendación</p>
             </article>
           </div>
           <p class="statement reveal">Convertimos datos agrícolas en decisiones inteligentes.</p>
         </div>
       </section>
 
-      <section class="section-pad impact" id="impacto">
-        <div class="container">
+      <!-- ===================== IMPACTO ===================== -->
+      <section class="impact" id="impacto">
+        <div class="impact-overlay"></div>
+        <div class="container impact-inner">
           <div class="section-heading reveal">
-            <span class="eyebrow">Impacto</span>
-            <h2>Decisiones más claras para una agricultura más sostenible.</h2>
+            <span class="eyebrow eyebrow-light">Impacto</span>
+            <h2 class="impact-title">Decisiones más claras para una agricultura más sostenible.</h2>
           </div>
-          <div class="card-grid impact-grid">
-            <article class="impact-card reveal">Uso eficiente del agua</article>
-            <article class="impact-card reveal">Mejor manejo de nutrientes</article>
-            <article class="impact-card reveal">Decisiones basadas en datos</article>
-            <article class="impact-card reveal">Optimización de recursos</article>
-            <article class="impact-card reveal">Agricultura más sostenible</article>
-            <article class="impact-card reveal">Mayor eficiencia productiva</article>
+          <div class="impact-list reveal">
+            <div class="impact-item">
+              <span class="impact-num">01</span>
+              <span>Uso eficiente del agua</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-num">02</span>
+              <span>Mejor manejo de nutrientes</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-num">03</span>
+              <span>Decisiones basadas en datos</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-num">04</span>
+              <span>Optimización de recursos</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-num">05</span>
+              <span>Agricultura más sostenible</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-num">06</span>
+              <span>Mayor eficiencia productiva</span>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- ===================== ROADMAP ===================== -->
       <section class="section-pad roadmap">
         <div class="container">
           <div class="section-heading reveal">
@@ -447,15 +594,41 @@
             <h2>Evolución del proyecto</h2>
           </div>
           <div class="timeline">
-            <article class="reveal"><strong>Fase 1</strong><span>Simulación de sensores</span></article>
-            <article class="reveal"><strong>Fase 2</strong><span>Integración de sensores reales</span></article>
-            <article class="reveal"><strong>Fase 3</strong><span>Modelos de inteligencia artificial</span></article>
-            <article class="reveal"><strong>Fase 4</strong><span>Aplicación móvil</span></article>
-            <article class="reveal"><strong>Fase 5</strong><span>Pruebas en campo</span></article>
+            <article class="reveal">
+              <div class="timeline-phase">Fase 1</div>
+              <div class="timeline-dot"></div>
+              <strong>Simulación</strong>
+              <span>Simulación de sensores</span>
+            </article>
+            <article class="reveal">
+              <div class="timeline-phase">Fase 2</div>
+              <div class="timeline-dot"></div>
+              <strong>Sensores reales</strong>
+              <span>Integración de sensores reales</span>
+            </article>
+            <article class="reveal">
+              <div class="timeline-phase">Fase 3</div>
+              <div class="timeline-dot"></div>
+              <strong>Modelos de IA</strong>
+              <span>Modelos de inteligencia artificial</span>
+            </article>
+            <article class="reveal">
+              <div class="timeline-phase">Fase 4</div>
+              <div class="timeline-dot"></div>
+              <strong>App Móvil</strong>
+              <span>Aplicación móvil</span>
+            </article>
+            <article class="reveal">
+              <div class="timeline-phase">Fase 5</div>
+              <div class="timeline-dot"></div>
+              <strong>Campo Real</strong>
+              <span>Pruebas en campo</span>
+            </article>
           </div>
         </div>
       </section>
 
+      <!-- ===================== APLICACIONES ===================== -->
       <section class="section-pad applications">
         <div class="container split">
           <div class="section-heading reveal">
@@ -472,6 +645,7 @@
         </div>
       </section>
 
+      <!-- ===================== ACADÉMICO ===================== -->
       <section class="section-pad academics">
         <div class="container">
           <div class="section-heading center reveal">
@@ -485,48 +659,19 @@
         </div>
       </section>
 
-      <!-- <section class="section-pad team-docs">
-        <div class="container team-docs-grid">
-          <div>
-            <div class="section-heading reveal">
-              <span class="eyebrow">Equipo</span>
-              <h2>Integrantes</h2>
-            </div>
-            <div class="team-grid">
-              <article class="person reveal"><strong>Integrante 1</strong><span>Desarrollo / IA</span></article>
-              <article class="person reveal"><strong>Integrante 2</strong><span>IoT / Hardware</span></article>
-              <article class="person reveal"><strong>Integrante 3</strong><span>Aplicación móvil</span></article>
-              <article class="person reveal"><strong>Integrante 4</strong><span>Seguridad / Redes</span></article>
-            </div>
-          </div>
-          <div>
-            <div class="section-heading reveal">
-              <span class="eyebrow">Documentación</span>
-              <h2>Recursos del proyecto</h2>
-            </div>
-            <div class="doc-buttons reveal">
-              <a href="#" aria-disabled="true">Presentación - placeholder</a>
-              <a href="#" aria-disabled="true">Documento del proyecto - placeholder</a>
-              <a href="#" aria-disabled="true">GitHub - placeholder</a>
-              <a href="#video">Ver video</a>
-              <a href="#" aria-disabled="true">Demo - placeholder</a>
-            </div>
-          </div>
-        </div>
-      </section>-->
-
-      <section class="final-cta section-pad">
-        <div class="container reveal">
+      <!-- ===================== CTA FINAL ===================== -->
+      <section class="final-cta">
+        <div class="final-cta-overlay"></div>
+        <div class="container reveal final-cta-inner">
           <h2>El futuro del campo comienza con información.</h2>
-          <span class="eyebrow">AgroMind</span>
+          <span class="eyebrow eyebrow-light">AgroMind</span>
           <p>
-            AgroMind busca acercar la inteligencia artificial y el Internet de las Cosas al campo para
-            ayudar a transformar datos en decisiones.
+            Inteligencia que hace crecer el campo.
           </p>
-          <a class="button primary" href="#demo">Explorar AgroMind</a>
-          <strong>Escanea. Conoce. Imagina el futuro del campo.</strong>
+          <a class="button primary" href="#demo">Conoce AgroMind</a>
         </div>
       </section>
+
     </main>
 
     <footer class="site-footer">
@@ -543,7 +688,7 @@
           <a href="#demo">Demo</a>
           <a href="#impacto">Impacto</a>
         </nav>
-        <span>&copy; 2026 AgroMind</span>
+        <span>© 2026 AgroMind</span>
       </div>
     </footer>
 
